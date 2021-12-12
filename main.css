@@ -46,7 +46,7 @@ button {
 
 .navbar {
     width: 5rem;
-    height: 100vh;
+    height: 100%;
     transition: width 350ms ease;
     position: fixed;
     background-color: var(--bg-primary);
@@ -141,7 +141,7 @@ button {
 }
 
 /* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
     .navbar {
         top: 0;
         width: 5rem;
@@ -173,7 +173,7 @@ button {
 }
 
 /* Small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .navbar {
         bottom: 0;
         width: 100vw;
@@ -194,6 +194,81 @@ button {
 
     main {
         margin: 0;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    main #coming-soon {
+        height: inherit;
+        text-align: center;
+    }
+
+    main #coming-soon img {
+        transform: translateX(4rem);
+    }
+
+    main #coming-soon .flex {
+        align-items: center;
+    }
+
+    main #about-me .textbox {
+        text-align: center;
+    }
+
+    main #about-me .flex img {
+        transform: translateX(2rem);
+        width: 200px;
+    }
+
+    main #about-me .flex {
+        align-items: center;
+    }
+
+    main #about-me button {
+        width: 110px;
+    }
+
+    main #photo-gallery h3 {
+        width: 300px;
+    }
+
+    main #photo-gallery .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 500px);
+        grid-auto-rows: 500px;
+        grid-template-rows: repeat(6, 500px);
+    }
+
+    main #photo-gallery .photo.one {
+        grid-column: 1;
+        
+    }
+
+    main #photo-gallery .photo.two {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    main #photo-gallery .photo.three {
+        grid-column: 1;
+       grid-row: 3;
+    }
+
+    main #photo-gallery .photo.four {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    main #photo-gallery .photo.five {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    main #photo-gallery .photo.six {
+        grid-column: 1;
+       grid-row: 6;
     }
 }
 
@@ -258,7 +333,7 @@ button {
     width: 350px;
     color: var(--text-secondary);
     text-align: inherit;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
 }
 
 #coming-soon h2 {
@@ -295,7 +370,6 @@ button {
 
 #about-me {
     width: 100%;
-    height: 100vh;
     position: relative;
     background-color: var(--bg-secondary);
 }
@@ -370,7 +444,104 @@ button {
 #about-me h2 {
     font-size: 3rem;
 }
+
 #about-me p {
     padding-top: 25px;
     font-size: 1.25rem;
+}
+
+/* =============== PHOTO GALLERY ===============*/
+
+#photo-gallery {
+    width: 100%;
+    background-color: var(--bg-tertiary);
+}
+
+#photo-gallery .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo-gallery h1 {
+    padding-top: 75px;
+    font-size: 3rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+#photo-gallery h3 {
+    margin-top: 20px;
+    width: 800px;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+#photo-gallery figcaption {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+#photo-gallery figure img {
+    height: 400px;
+}
+
+#photo-gallery .gallery {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(17, 100px);
+    justify-content: center;
+    column-gap: 50px;
+}
+
+#photo-gallery .photo {
+    width: 500px;
+    height: 400px;
+}
+
+#photo-gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#photo-gallery .photo.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#photo-gallery .photo.two {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#photo-gallery .photo.three {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+#photo-gallery .photo.four {
+    grid-column: 2;
+    grid-row: 8;
+}
+
+#photo-gallery .photo.five {
+    grid-column: 1;
+    grid-row: 11;
+}
+
+#photo-gallery .photo.six {
+    grid-column: 2;
+    grid-row: 13;
+}
+
+/* =============== CAST MESSAGE ===============*/
+
+#cast-message {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-secondary);
 }

@@ -1,6 +1,8 @@
 tavern
     
     12/9 
-        - want to do a button nav that pops out when clicked
         - rolling dice loader
-        - new dice logo for corner
+        - new dice logo
+
+    12/11
+        - add button to scroll down on landing
