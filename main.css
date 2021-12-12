@@ -316,6 +316,7 @@ button {
 
 #about-me img {
     width: 500px;
+    margin-right: 80px;
 }
 
 #about-me .btn-container {
@@ -332,6 +333,12 @@ button {
     align-items: center;
 }
 
+#about-me .btnboxtext {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #about-me button {
     width: 150px;
     height: 50px;
@@ -340,4 +347,30 @@ button {
     color: var(--text-secondary);
     background-color: var(--bg-secondary);
     border: 2px solid var(--text-secondary);
+}
+
+#about-me .white {
+    width: 250px;
+    margin: 150px 10px 0 10px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+}
+
+#about-me .textbox {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+#about-me h2 {
+    font-size: 3rem;
+}
+#about-me p {
+    padding-top: 25px;
+    font-size: 1.25rem;
 }
