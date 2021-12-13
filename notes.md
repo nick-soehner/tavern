@@ -1,8 +1,5 @@
 tavern
-    
-    12/9 
-        - rolling dice loader
-        - new dice logo
 
-    12/11
-        - add button to scroll down on landing
+    12/13
+        - find a away to fade out photo gallery
+        - also find how to fade in each picture
