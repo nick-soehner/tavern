@@ -7,6 +7,7 @@
     --bg-secondary: #141418;
     --bg-tertiary: #1d1d21;
     --bg-fourth: #0c0b0b;
+    --color-red: #b83030;
     --transition-speed: 350ms;
 }
 
@@ -67,7 +68,7 @@ h1 {
     width: 75px;
     height: 75px;
     position: relative;
-    color: white;
+    color: var(--color-red);
     animation: loader 1.5s infinite ease;
 }
   
@@ -115,7 +116,7 @@ h1 {
     height: 5rem;
     color: var(--text-primary);
     text-decoration: none;
-    filter: grayscale(100%) opacity(0.7);
+    /* filter: grayscale(100%) opacity(0.7); */
     transition: var(--transition-speed);
 }
 
@@ -714,11 +715,20 @@ footer .social-btn:hover {
 
 #adventures {
     width: 100%;
-    background-color: var(--bg-secondary);
+}
+
+#adventures .adventures-land {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./img/adventures.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 #adventures h1 {
     padding: 200px 0;
+    font-size: 7rem;
+    text-shadow: 3px 3px 2px black;
 }
 
 #adventures .flex {
@@ -785,6 +795,10 @@ footer .social-btn:hover {
     align-items: center;
 }
 
+#adventures .book-container img {
+    width: 400px;
+}
+
 #adventures .textbox {
     width: 350px;
     color: var(--text-secondary);
@@ -794,6 +808,7 @@ footer .social-btn:hover {
 
 #adventures .textbox h3 {
     font-size: 3rem;
+    line-height: 3rem;
     padding: 25px 0;
 }
 
