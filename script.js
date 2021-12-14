@@ -5,9 +5,12 @@ $(window).on("load", function () {
 // ScrollMagic
 let controller = new ScrollMagic.Controller();
 
-let photoScene = new ScrollMagic.Scene({
-    triggerElement: "#photo-gallery",
-    triggerHook: 0.3,
-})
-    .setClassToggle(".photo", "show")
-    .addTo(controller);
+$(".photo").each(function () {
+    let photoScene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 0.5,
+        reverse: false,
+    })
+        .setClassToggle(this, "show")
+        .addTo(controller);
+});

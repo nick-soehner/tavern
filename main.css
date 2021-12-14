@@ -41,6 +41,13 @@ button {
     font-family: "Open Sans";
 }
 
+h1 {
+    padding-top: 75px;
+    font-size: 3rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
 /* =============== LOADER ===============*/
 
 .loader-wrapper {
@@ -158,6 +165,399 @@ button {
 .navbar:hover .logo svg {
     transform: rotate(-180deg);
 }
+
+/* =============== LANDING ===============*/
+
+#landing {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/bakground.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.landing-wrapper {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing h1 {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--text-secondary);
+    text-shadow: 3px 3px 2px black;
+}
+
+#landing h4 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 0.1rem;
+}
+
+/* =============== COMING SOON ===============*/
+
+#coming-soon {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-tertiary);
+    position: relative;
+}
+
+#coming-soon .flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 120px;
+}
+
+#coming-soon .textbox {
+    width: 350px;
+    color: var(--text-secondary);
+    text-align: inherit;
+    letter-spacing: 0.1rem;
+}
+
+#coming-soon h2 {
+    font-size: 3rem;
+}
+
+#coming-soon h5 {
+    font-size: 1rem;
+    padding: 20px 0;
+}
+
+#coming-soon h6 {
+    padding: 50px 0;
+    font-size: 1rem;
+}
+
+#coming-soon button {
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 7px;
+    border: 2px solid var(--text-secondary);
+    outline: none;
+    background-color: var(--text-secondary);
+}
+
+#coming-soon button:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+/* =============== ABOUT ME ===============*/
+
+#about-me {
+    width: 100%;
+    position: relative;
+    background-color: var(--bg-secondary);
+}
+
+#about-me .flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 120px;
+}
+
+#about-me img {
+    width: 500px;
+    margin-right: 80px;
+}
+
+#about-me .btn-container {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-top: 50px;
+}
+
+#about-me .btnbox {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#about-me .btnboxtext {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about-me button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--text-secondary);
+}
+
+#about-me .white {
+    width: 250px;
+    margin: 150px 10px 0 10px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+}
+
+#about-me .white:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+#about-me .textbox {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+#about-me h2 {
+    font-size: 3rem;
+}
+
+#about-me p {
+    padding-top: 25px;
+    font-size: 1.25rem;
+}
+
+/* =============== PHOTO GALLERY ===============*/
+
+#photo-gallery {
+    width: 100%;
+    background-color: var(--bg-tertiary);
+}
+
+#photo-gallery .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#photo-gallery h3 {
+    margin-top: 20px;
+    width: 800px;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+#photo-gallery figcaption {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+#photo-gallery figure img {
+    height: 400px;
+}
+
+#photo-gallery .gallery {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(17, 100px);
+    justify-content: center;
+    column-gap: 50px;
+}
+
+
+#photo-gallery .photo {
+    width: 500px;
+    height: 400px;
+    opacity: 0;
+}
+
+#photo-gallery .photo:nth-child(odd) {
+    transform: translateX(-6rem);
+}
+
+#photo-gallery .photo:nth-child(even) {
+    transform: translateX(6rem);
+}
+
+#photo-gallery .photo.show {
+    animation: 
+        fadeInSide 1s ease forwards;
+}
+
+#photo-gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#photo-gallery .photo.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#photo-gallery .photo.two {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#photo-gallery .photo.three {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+#photo-gallery .photo.four {
+    grid-column: 2;
+    grid-row: 8;
+}
+
+#photo-gallery .photo.five {
+    grid-column: 1;
+    grid-row: 11;
+}
+
+#photo-gallery .photo.six {
+    grid-column: 2;
+    grid-row: 13;
+}
+
+/* =============== CAST MESSAGE ===============*/
+
+#cast-message {
+    height: 50vh;
+    width: 100%;
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cast-message h3 {
+    margin-top: 40px;
+    width: 800px;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+#cast-message .white {
+    width: 250px;
+    height: 50px;
+    margin-top: 75px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+}
+
+#cast-message .white:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+/* =============== FOOTER ===============*/
+
+footer {
+    width: 100%;
+    height: 40vh;
+    background-color: var(--bg-fourth);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .dice {
+    width: 200px;
+    transform: rotate(0deg);
+}
+
+footer .dice:hover {
+    transition: var(--transition-speed);
+    transform: rotate(360deg);
+}
+
+footer button {
+    width: 250px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+}
+
+footer button:hover {
+    background-color: var(--bg-fourth);
+    color: var(--text-secondary);
+}
+
+footer .socials {
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .socials a {
+    width: 40px;
+    height: 40px;
+}
+
+footer .social-btn {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+footer .social-btn:hover {
+    color: var(--text-secondary);
+}
+
+/* =============== ANIMATION ===============*/
+
+@keyframes fadeIn {
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInSide {
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes fadeOutRight {
+    to {
+        opacity: 0;
+        transform: translateX(-4rem);
+    }
+}
+
+/* =============== MEDIA QUERY ===============*/
 
 /* Large screens */
 @media only screen and (min-width: 1000px) {
@@ -312,421 +712,98 @@ button {
     }
 }
 
-/* =============== LANDING ===============*/
-
-#landing {
-    height: 100vh;
+#adventures {
     width: 100%;
-    background-image: url(./img/bakground.jpg);
-    background-position: center;
-    background-size: cover;
+    background-color: var(--bg-secondary);
 }
 
-.landing-wrapper {
-    height: 75vh;
+#adventures h1 {
+    padding: 200px 0;
+}
+
+#adventures .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#adventures .series-container {
+    width: 100%;
+    text-align: center;
+}
+
+#adventures .series-container h2 {
+    color: var(--text-secondary);
+    padding-top: 100px;
+    font-size: 3rem;
+    text-shadow: 3px 3px 2px black;
+    text-decoration: underline;
+}
+
+#adventures .series-container:nth-child(odd) {
+    background-color: var(--bg-tertiary);
+}
+
+#adventures .series-container:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+#adventures .book-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
-#landing h1 {
-    text-align: center;
-    font-size: 5rem;
+#adventures .btn-container {
+    margin: 100px 0;
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+#adventures .btn-container button {
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+}
+
+#adventures .btn-container button:hover {
+    background-color: var(--bg-secondary);
     color: var(--text-secondary);
-    text-shadow: 3px 3px 2px black;
 }
 
-#landing h4 {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 1rem;
-    color: var(--text-secondary);
-    text-shadow: 2px 2px 2px black;
-    letter-spacing: 0.1rem;
-}
-
-/* =============== COMING SOON ===============*/
-
-#coming-soon {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--bg-tertiary);
-    position: relative;
-}
-
-#coming-soon h1 {
-    padding-top: 75px;
-    font-size: 3rem;
-    color: var(--text-secondary);
-    text-align: center;
-}
-
-#coming-soon .flex {
+#adventures .book-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    margin-top: 120px;
+    align-items: center;
 }
 
-#coming-soon .textbox {
+#adventures .textbox {
     width: 350px;
     color: var(--text-secondary);
     text-align: inherit;
     letter-spacing: 0.1rem;
 }
 
-#coming-soon h2 {
+#adventures .textbox h3 {
     font-size: 3rem;
+    padding: 25px 0;
 }
 
-#coming-soon h5 {
+#adventures .textbox h6 {
     font-size: 1rem;
-    padding: 20px 0;
+    padding: 20px;
 }
 
-#coming-soon h6 {
-    padding: 50px 0;
-    font-size: 1rem;
-}
-
-#coming-soon button {
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 7px;
-    border: 2px solid var(--text-secondary);
-    outline: none;
-    background-color: var(--text-secondary);
-}
-
-#coming-soon button:hover {
-    background-color: var(--bg-tertiary);
-    color: var(--text-secondary);
-}
-
-/* =============== ABOUT ME ===============*/
-
-#about-me {
-    width: 100%;
-    position: relative;
-    background-color: var(--bg-secondary);
-}
-
-#about-me h1 {
-    padding-top: 75px;
-    font-size: 3rem;
-    color: var(--text-secondary);
-    text-align: center;
-}
-
-#about-me .flex {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 120px;
-}
-
-#about-me img {
-    width: 500px;
-    margin-right: 80px;
-}
-
-#about-me .btn-container {
-    display: flex;
-    justify-content: center;
-    height: 100px;
-    margin-top: 50px;
-}
-
-#about-me .btnbox {
-    width: 70%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#about-me .btnboxtext {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#about-me button {
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    background-color: var(--bg-secondary);
-    border: 2px solid var(--text-secondary);
-}
-
-#about-me .white {
-    width: 250px;
-    margin: 150px 10px 0 10px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    color: var(--bg-secondary);
-    background-color: var(--text-secondary);
-    border: 2px solid var(--text-secondary);
-}
-
-#about-me .white:hover {
-    background-color: var(--bg-secondary);
-    color: var(--text-secondary);
-}
-
-#about-me .textbox {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    color: var(--text-secondary);
-    text-align: right;
-}
-
-#about-me h2 {
-    font-size: 3rem;
-}
-
-#about-me p {
-    padding-top: 25px;
-    font-size: 1.25rem;
-}
-
-/* =============== PHOTO GALLERY ===============*/
-
-#photo-gallery {
-    width: 100%;
-    background-color: var(--bg-tertiary);
-}
-
-#photo-gallery .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#photo-gallery h1 {
-    padding-top: 75px;
-    font-size: 3rem;
-    color: var(--text-secondary);
-    text-align: center;
-}
-
-#photo-gallery h3 {
-    margin-top: 20px;
-    width: 800px;
-    text-align: center;
-    font-size: 1rem;
+#adventures .textbox p {
     color: var(--text-primary);
 }
 
-#photo-gallery figcaption {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-#photo-gallery figure img {
-    height: 400px;
-}
-
-#photo-gallery .gallery {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 500px);
-    grid-template-rows: repeat(17, 100px);
-    justify-content: center;
-    column-gap: 50px;
-}
-
-
-#photo-gallery .photo {
-    width: 500px;
-    height: 400px;
-    opacity: 0;
-}
-
-#photo-gallery .photo:nth-child(odd) {
-    transform: translateX(-6rem);
-}
-
-#photo-gallery .photo:nth-child(even) {
-    transform: translateX(6rem);
-}
-
-#photo-gallery .photo.show {
-    animation: 
-        fadeInSide 1s ease forwards;
-}
-
-#photo-gallery img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#photo-gallery .photo.one {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#photo-gallery .photo.two {
-    grid-column: 2;
-    grid-row: 3;
-}
-
-#photo-gallery .photo.three {
-    grid-column: 1;
-    grid-row: 6;
-}
-
-#photo-gallery .photo.four {
-    grid-column: 2;
-    grid-row: 8;
-}
-
-#photo-gallery .photo.five {
-    grid-column: 1;
-    grid-row: 11;
-}
-
-#photo-gallery .photo.six {
-    grid-column: 2;
-    grid-row: 13;
-}
-
-/* =============== CAST MESSAGE ===============*/
-
-#cast-message {
-    height: 50vh;
-    width: 100%;
-    background-color: var(--bg-secondary);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#cast-message h1 {
-    font-size: 3rem;
-    color: var(--text-secondary);
-    text-align: center;
-}
-
-#cast-message h3 {
-    margin-top: 40px;
-    width: 800px;
-    text-align: center;
-    font-size: 1rem;
-    color: var(--text-primary);
-}
-
-#cast-message .white {
-    width: 250px;
-    height: 50px;
-    margin-top: 75px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    color: var(--bg-secondary);
-    background-color: var(--text-secondary);
-    border: 2px solid var(--text-secondary);
-}
-
-#cast-message .white:hover {
-    background-color: var(--bg-secondary);
-    color: var(--text-secondary);
-}
-
-/* =============== FOOTER ===============*/
-
-footer {
-    width: 100%;
-    height: 40vh;
-    background-color: var(--bg-fourth);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .dice {
-    width: 200px;
-    transform: rotate(0deg);
-}
-
-footer .dice:hover {
-    transition: var(--transition-speed);
-    transform: rotate(360deg);
-}
-
-footer button {
-    width: 250px;
-    height: 50px;
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    color: var(--bg-secondary);
-    background-color: var(--text-secondary);
-    border: 2px solid var(--text-secondary);
-}
-
-footer button:hover {
-    background-color: var(--bg-fourth);
-    color: var(--text-secondary);
-}
-
-footer .socials {
-    width: 20%;
-    height: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-footer .socials a {
-    width: 40px;
-    height: 40px;
-}
-
-footer .social-btn {
-    display: flex;
-    align-items: center;
-    color: var(--text-primary);
-    text-decoration: none;
-}
-
-footer .social-btn:hover {
-    color: var(--text-secondary);
-}
-
-/* =============== ANIMATION ===============*/
-
-@keyframes fadeIn {
-    to {
-        opacity: 100%;
-    }
-}
-
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeInSide {
-    to {
-        opacity: 1;
-        transform: translateX(0rem);
-    }
-}
-
-@keyframes fadeOutRight {
-    to {
-        opacity: 0;
-        transform: translateX(-4rem);
-    }
-}
 
