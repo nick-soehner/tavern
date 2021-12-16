@@ -1,9 +1,9 @@
 tavern
 
     red accent change - change svg path fill -> var(--color-red)
-    
-    12/13
-        - find a away to fade out photo gallery
-        - also find how to fade in each picture
-        -try red accent
+
+    12/16
+        - change all img to videos on bards corner in css as well
+        - go through nav links on all pages
+        - fix titles
     

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portals</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./img/dice-d20-solid.svg">
+    <script src="./plugins/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <span class="loader"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-d20"
+                class="svg-inline--fa fa-dice-d20 fa-w-15" role="img" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 480 512">
+                <path fill="currentColor"
+                    d="M106.75 215.06L1.2 370.95c-3.08 5 .1 11.5 5.93 12.14l208.26 22.07-108.64-190.1zM7.41 315.43L82.7 193.08 6.06 147.1c-2.67-1.6-6.06.32-6.06 3.43v162.81c0 4.03 5.29 5.53 7.41 2.09zM18.25 423.6l194.4 87.66c5.3 2.45 11.35-1.43 11.35-7.26v-65.67l-203.55-22.3c-4.45-.5-6.23 5.59-2.2 7.57zm81.22-257.78L179.4 22.88c4.34-7.06-3.59-15.25-10.78-11.14L17.81 110.35c-2.47 1.62-2.39 5.26.13 6.78l81.53 48.69zM240 176h109.21L253.63 7.62C250.5 2.54 245.25 0 240 0s-10.5 2.54-13.63 7.62L130.79 176H240zm233.94-28.9l-76.64 45.99 75.29 122.35c2.11 3.44 7.41 1.94 7.41-2.1V150.53c0-3.11-3.39-5.03-6.06-3.43zm-93.41 18.72l81.53-48.7c2.53-1.52 2.6-5.16.13-6.78l-150.81-98.6c-7.19-4.11-15.12 4.08-10.78 11.14l79.93 142.94zm79.02 250.21L256 438.32v65.67c0 5.84 6.05 9.71 11.35 7.26l194.4-87.66c4.03-1.97 2.25-8.06-2.2-7.56zm-86.3-200.97l-108.63 190.1 208.26-22.07c5.83-.65 9.01-7.14 5.93-12.14L373.25 215.06zM240 208H139.57L240 383.75 340.43 208H240z">
+                </path>
+            </svg></span>
+    </div>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="./index.html" class="nav-link">
+                    <span class="link-text logo-text">Tavern</span>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-d20"
+                        class="svg-inline--fa fa-dice-d20 fa-w-15" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 480 512">
+                        <path fill="currentColor"
+                            d="M106.75 215.06L1.2 370.95c-3.08 5 .1 11.5 5.93 12.14l208.26 22.07-108.64-190.1zM7.41 315.43L82.7 193.08 6.06 147.1c-2.67-1.6-6.06.32-6.06 3.43v162.81c0 4.03 5.29 5.53 7.41 2.09zM18.25 423.6l194.4 87.66c5.3 2.45 11.35-1.43 11.35-7.26v-65.67l-203.55-22.3c-4.45-.5-6.23 5.59-2.2 7.57zm81.22-257.78L179.4 22.88c4.34-7.06-3.59-15.25-10.78-11.14L17.81 110.35c-2.47 1.62-2.39 5.26.13 6.78l81.53 48.69zM240 176h109.21L253.63 7.62C250.5 2.54 245.25 0 240 0s-10.5 2.54-13.63 7.62L130.79 176H240zm233.94-28.9l-76.64 45.99 75.29 122.35c2.11 3.44 7.41 1.94 7.41-2.1V150.53c0-3.11-3.39-5.03-6.06-3.43zm-93.41 18.72l81.53-48.7c2.53-1.52 2.6-5.16.13-6.78l-150.81-98.6c-7.19-4.11-15.12 4.08-10.78 11.14l79.93 142.94zm79.02 250.21L256 438.32v65.67c0 5.84 6.05 9.71 11.35 7.26l194.4-87.66c4.03-1.97 2.25-8.06-2.2-7.56zm-86.3-200.97l-108.63 190.1 208.26-22.07c5.83-.65 9.01-7.14 5.93-12.14L373.25 215.06zM240 208H139.57L240 383.75 340.43 208H240z">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="./adventures.html" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dice-d6"
+                        class="svg-inline--fa fa-dice-d6 fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M422.19 109.95L256.21 9.07c-19.91-12.1-44.52-12.1-64.43 0L25.81 109.95c-5.32 3.23-5.29 11.27.06 14.46L224 242.55l198.14-118.14c5.35-3.19 5.38-11.22.05-14.46zm13.84 44.63L240 271.46v223.82c0 12.88 13.39 20.91 24.05 14.43l152.16-92.48c19.68-11.96 31.79-33.94 31.79-57.7v-197.7c0-6.41-6.64-10.43-11.97-7.25zM0 161.83v197.7c0 23.77 12.11 45.74 31.79 57.7l152.16 92.47c10.67 6.48 24.05-1.54 24.05-14.43V271.46L11.97 154.58C6.64 151.4 0 155.42 0 161.83z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Adventures</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="./bards-corner.html" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hat-wizard"
+                        class="svg-inline--fa fa-hat-wizard fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M496 448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zm-304-64l-64-32 64-32 32-64 32 64 64 32-64 32-16 32h208l-86.41-201.63a63.955 63.955 0 0 1-1.89-45.45L416 0 228.42 107.19a127.989 127.989 0 0 0-53.46 59.15L64 416h144l-16-32zm64-224l16-32 16 32 32 16-32 16-16 32-16-32-32-16 32-16z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Bard's Corner</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dungeon"
+                        class="svg-inline--fa fa-dungeon fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="var(--color-red)"
+                            d="M128.73 195.32l-82.81-51.76c-8.04-5.02-18.99-2.17-22.93 6.45A254.19 254.19 0 0 0 .54 239.28C-.05 248.37 7.59 256 16.69 256h97.13c7.96 0 14.08-6.25 15.01-14.16 1.09-9.33 3.24-18.33 6.24-26.94 2.56-7.34.25-15.46-6.34-19.58zM319.03 8C298.86 2.82 277.77 0 256 0s-42.86 2.82-63.03 8c-9.17 2.35-13.91 12.6-10.39 21.39l37.47 104.03A16.003 16.003 0 0 0 235.1 144h41.8c6.75 0 12.77-4.23 15.05-10.58l37.47-104.03c3.52-8.79-1.22-19.03-10.39-21.39zM112 288H16c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h96c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16zm0 128H16c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h96c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16zm77.31-283.67l-36.32-90.8c-3.53-8.83-14.13-12.99-22.42-8.31a257.308 257.308 0 0 0-71.61 59.89c-6.06 7.32-3.85 18.48 4.22 23.52l82.93 51.83c6.51 4.07 14.66 2.62 20.11-2.79 5.18-5.15 10.79-9.85 16.79-14.05 6.28-4.41 9.15-12.17 6.3-19.29zM398.18 256h97.13c9.1 0 16.74-7.63 16.15-16.72a254.135 254.135 0 0 0-22.45-89.27c-3.94-8.62-14.89-11.47-22.93-6.45l-82.81 51.76c-6.59 4.12-8.9 12.24-6.34 19.58 3.01 8.61 5.15 17.62 6.24 26.94.93 7.91 7.05 14.16 15.01 14.16zm54.85-162.89a257.308 257.308 0 0 0-71.61-59.89c-8.28-4.68-18.88-.52-22.42 8.31l-36.32 90.8c-2.85 7.12.02 14.88 6.3 19.28 6 4.2 11.61 8.9 16.79 14.05 5.44 5.41 13.6 6.86 20.11 2.79l82.93-51.83c8.07-5.03 10.29-16.19 4.22-23.51zM496 288h-96c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h96c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16zm0 128h-96c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h96c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16zM240 177.62V472c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8V177.62c-5.23-.89-10.52-1.62-16-1.62s-10.77.73-16 1.62zm-64 41.51V472c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8V189.36c-12.78 7.45-23.84 17.47-32 29.77zm128-29.77V472c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8V219.13c-8.16-12.3-19.22-22.32-32-29.77z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Portals</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="scroll"
+                        class="svg-inline--fa fa-scroll fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 512">
+                        <path fill="currentColor"
+                            d="M48 0C21.53 0 0 21.53 0 48v64c0 8.84 7.16 16 16 16h80V48C96 21.53 74.47 0 48 0zm208 412.57V352h288V96c0-52.94-43.06-96-96-96H111.59C121.74 13.41 128 29.92 128 48v368c0 38.87 34.65 69.65 74.75 63.12C234.22 474 256 444.46 256 412.57zM288 384v32c0 52.93-43.06 96-96 96h336c61.86 0 112-50.14 112-112 0-8.84-7.16-16-16-16H288z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Free Adventures</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="handshake"
+                        class="svg-inline--fa fa-handshake fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 640 512">
+                        <path fill="currentColor"
+                            d="M434.7 64h-85.9c-8 0-15.7 3-21.6 8.4l-98.3 90c-.1.1-.2.3-.3.4-16.6 15.6-16.3 40.5-2.1 56 12.7 13.9 39.4 17.6 56.1 2.7.1-.1.3-.1.4-.2l79.9-73.2c6.5-5.9 16.7-5.5 22.6 1 6 6.5 5.5 16.6-1 22.6l-26.1 23.9L504 313.8c2.9 2.4 5.5 5 7.9 7.7V128l-54.6-54.6c-5.9-6-14.1-9.4-22.6-9.4zM544 128.2v223.9c0 17.7 14.3 32 32 32h64V128.2h-96zm48 223.9c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zM0 384h64c17.7 0 32-14.3 32-32V128.2H0V384zm48-63.9c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16c0-8.9 7.2-16 16-16zm435.9 18.6L334.6 217.5l-30 27.5c-29.7 27.1-75.2 24.5-101.7-4.4-26.9-29.4-24.8-74.9 4.4-101.7L289.1 64h-83.8c-8.5 0-16.6 3.4-22.6 9.4L128 128v223.9h18.3l90.5 81.9c27.4 22.3 67.7 18.1 90-9.3l.2-.2 17.9 15.5c15.9 13 39.4 10.5 52.3-5.4l31.4-38.6 5.4 4.4c13.7 11.1 33.9 9.1 45-4.7l9.5-11.7c11.2-13.8 9.1-33.9-4.6-45.1z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Meet The Characters</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book-open"
+                        class="svg-inline--fa fa-book-open fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M542.22 32.05c-54.8 3.11-163.72 14.43-230.96 55.59-4.64 2.84-7.27 7.89-7.27 13.17v363.87c0 11.55 12.63 18.85 23.28 13.49 69.18-34.82 169.23-44.32 218.7-46.92 16.89-.89 30.02-14.43 30.02-30.66V62.75c.01-17.71-15.35-31.74-33.77-30.7zM264.73 87.64C197.5 46.48 88.58 35.17 33.78 32.05 15.36 31.01 0 45.04 0 62.75V400.6c0 16.24 13.13 29.78 30.02 30.66 49.49 2.6 149.59 12.11 218.77 46.95 10.62 5.35 23.21-1.94 23.21-13.46V100.63c0-5.29-2.62-10.14-7.27-12.99z">
+                        </path>
+                    </svg>
+                    <span class="link-text">The Prince Beta</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope"
+                        class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                        </path>
+                    </svg>
+                    <span class="link-text">Cast Message</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="portals">
+            <div class="portals-land">
+                <h1>Portals</h1>
+                <p>International Buy Links</p>
+            </div>
+            <div class="flex">
+                <div class="series-container">
+                    <h2>Dragon Siege Series</h2>
+                    <div class="book-wrapper">
+                        <div class="book-container">
+                            <img src="./img/book-covers/black_book.png" alt="the black book" />
+                            <div class="textbox">
+                                <h3>The Black Book</h3>
+                                <h6>Book One</h6>
+                                <p>
+                                    Josh and his friends have been playing D&D together for a long time, but when their
+                                    DM, Raul, drops the newest story
+                                    arc... Chaos ensues. <br><br>
+                                    Come along on the adventure as Sirris and the gang face their first steps towards
+                                    destiny. Discover the twisted history
+                                    that runs deep in the catacombs of The Vault of Decay.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <a href="https://www.amazon.ca/dp/B08VXF96FR" target="_blank"
+                                rel="noopener noreferrer"><button>
+                                    CAN Paperback
+                                </button></a>
+                            <a href="https://www.amazon.ca/dp/B08VTVMX4N" target="_blank"
+                                rel="noopener noreferrer"><button>CAN Kindle</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B08VXF96FR" target="_blank"
+                                rel="noopener noreferrer"><button>UK Paperback</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B08VTVMX4N" target="_blank"
+                                rel="noopener noreferrer"><button>UK Kindle</button></a>
+                            <a href="https://www.amazon.com.au/dp/B08VTVMX4N" target="_blank"
+                                rel="noopener noreferrer"><button>AUS Kindle</button></a>
+                        </div>
+                    </div>
+                    <div class="book-wrapper">
+                        <div class="book-container">
+                            <img src="./img/book-covers/green_book.png" alt="the green book" />
+                            <div class="textbox">
+                                <h3>The Green Book</h3>
+                                <h6>Book Two</h6>
+                                <p>
+                                    Josh and his friends have been
+                                    playing D&D together for a long
+                                    time, but when their DM, Raul, drops
+                                    the newest story arc... Chaos
+                                    ensues.<br /><br />
+
+                                    Sirris and the gang continue to
+                                    track down powerful items, but when
+                                    they stumble across a displaced
+                                    tribe of Orcs, their adventure takes
+                                    an unexpected turn towards the Glass
+                                    Falls.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <a href="https://www.amazon.ca/dp/B08YN8YJVD" target="_blank"
+                                rel="noopener noreferrer"><button>
+                                    CAN Paperback
+                                </button></a>
+                            <a href="https://www.amazon.ca/dp/B08YLT34MP" target="_blank"
+                                rel="noopener noreferrer"><button>CAN Kindle</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B08YN8YJVD" target="_blank"
+                                rel="noopener noreferrer"><button>UK Paperback</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B08YLT34MP" target="_blank"
+                                rel="noopener noreferrer"><button>UK Kindle</button></a>
+                            <a href="https://www.amazon.com.au/dp/B08YLT34MP" target="_blank"
+                                rel="noopener noreferrer"><button>AUS Kindle</button></a>
+                        </div>
+                    </div>
+                    <div class="book-wrapper">
+                        <div class="book-container">
+                            <img src="./img/book-covers/blue_book.png" alt="the blue book" />
+                            <div class="textbox">
+                                <h3>The Blue Book</h3>
+                                <h6>Book Three</h6>
+                                <p>
+                                    Josh and his friends have been
+                                    playing D&D together for a long
+                                    time, but when their DM, Raul, drops
+                                    the newest story arc... Chaos
+                                    ensues. <br /><br />
+
+                                    Sirris and his friends are gaining
+                                    ground on their next mission, but
+                                    when their plan goes astray, they
+                                    will have to count on their own
+                                    cunning, skills, and the new friends
+                                    they meet in the middle.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <a href="https://www.amazon.ca/dp/B09BY3NRC4" target="_blank"
+                                rel="noopener noreferrer"><button>
+                                    CAN Paperback
+                                </button></a>
+                            <a href="https://www.amazon.ca/dp/B09BZPYDRK" target="_blank"
+                                rel="noopener noreferrer"><button>CAN Kindle</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B09BY3NRC4" target="_blank"
+                                rel="noopener noreferrer"><button>UK Paperback</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B09BZPYDRK" target="_blank"
+                                rel="noopener noreferrer"><button>UK Kindle</button></a>
+                            <a href="https://www.amazon.com.au/dp/B09BZPYDRK" target="_blank"
+                                rel="noopener noreferrer"><button>AUS Kindle</button></a>
+                            <a href="https://www.amazon.com.au/dp/B09BY3NRC4" target="_blank"
+                                rel="noopener noreferrer"><button>AUS Paperback</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="series-container">
+                    <h2>After School Adventure Series</h2>
+                    <div class="book-wrapper">
+                        <div class="book-container">
+                            <img src="./img/book-covers/beyond_patch.png" alt="Beyond the Briar Patch" />
+                            <div class="textbox">
+                                <h3>Beyond the Briar Patch</h3>
+                                <p>
+                                    The bell has rung and the weekend is here! Find your dice, clean up your
+                                    character sheet, and gather the gang for an
+                                    After School Adventure. <br><br>
+
+                                    Join Anne and her friends as they gather to play their weekly D&D game and
+                                    escape the everyday trials of being
+                                    teenagers. Jump into the adventure as their characters find themselves on the
+                                    run from the wrong crowd, discover a
+                                    hidden village, and go Beyond the Briar Patch.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <a href="https://www.amazon.ca/dp/B08GVD78J8" target="_blank"
+                                rel="noopener noreferrer"><button>
+                                    CAN Paperback
+                                </button></a>
+                            <a href="https://www.amazon.ca/dp/B084P8QX1D" target="_blank"
+                                rel="noopener noreferrer"><button>CAN Kindle</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B08GVD78J8" target="_blank"
+                                rel="noopener noreferrer"><button>UK Paperback</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B084P8QX1D" target="_blank"
+                                rel="noopener noreferrer"><button>UK Kindle</button></a>
+                            <a href="https://www.amazon.com.au/dp/B084P8QX1D" target="_blank"
+                                rel="noopener noreferrer"><button>AUS Kindle</button></a>
+                        </div>
+                    </div>
+                    <div class="book-wrapper">
+                        <div class="book-container">
+                            <img src="./img/book-covers/into_jungle.png" alt="Into the Jungle" />
+                            <div class="textbox">
+                                <h3>Into the Jungle</h3>
+                                <p>
+                                    The bell has rung and the weekend is here! Find your dice, clean up your
+                                    character sheet, and get the gang together for
+                                    another After School Adventure. <br><br>
+
+                                    Join Sam as they lead their friends Matt and Sarah on a winding journey into the
+                                    jungle to find the lost Crimson City
+                                    and uncover the mystery of the local legend All’zmog.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <a href="https://www.amazon.ca/dp/B086PNWL41" target="_blank"
+                                rel="noopener noreferrer"><button>
+                                    CAN Paperback
+                                </button></a>
+                            <a href="https://www.amazon.ca/dp/B086T5RZHX" target="_blank"
+                                rel="noopener noreferrer"><button>CAN Kindle</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B086PNWL41" target="_blank"
+                                rel="noopener noreferrer"><button>UK Paperback</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B086T5RZHX" target="_blank"
+                                rel="noopener noreferrer"><button>UK Kindle</button></a>
+                            <a href="https://www.amazon.com.au/dp/B086T5RZHX" target="_blank"
+                                rel="noopener noreferrer"><button>AUS Kindle</button></a>
+                        </div>
+                    </div>
+                    <div class="book-wrapper">
+                        <div class="book-container">
+                            <img src="./img/book-covers/lost_desert.png" alt="Lost in the Desert" />
+                            <div class="textbox">
+                                <h3>Lost in the Desert</h3>
+                                <p>
+                                    The bell has rung and the weekend is here! Find your dice, clean up your
+                                    character sheet, and get the gang together for
+                                    another After School Adventure. <br><br>
+
+                                    Join Jason, his sister Karissa, and their friends Gwen and Farha as they find
+                                    their characters captured by an evil
+                                    empire. Jump in with them as they attempt a daring escape to free themselves and
+                                    the other prisoners before it’s too
+                                    late.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <a href="https://www.amazon.ca/dp/B08B78JZCD" target="_blank"
+                                rel="noopener noreferrer"><button>
+                                    CAN Paperback
+                                </button></a>
+                            <a href="https://www.amazon.ca/dp/B08B6F1C9T" target="_blank"
+                                rel="noopener noreferrer"><button>CAN Kindle</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B08B78JZCD" target="_blank"
+                                rel="noopener noreferrer"><button>UK Paperback</button></a>
+                            <a href="https://www.amazon.co.uk/dp/B08B6F1C9T" target="_blank"
+                                rel="noopener noreferrer"><button>UK Kindle</button></a>
+                            <a href="https://www.amazon.com.au/dp/B08B6F1C9T" target="_blank"
+                                rel="noopener noreferrer"><button>AUS Kindle</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="btn-wrapper">
+                <button>Amazon Author Page</button>
+                <button>International Buy Links</button>
+                <button>Free EBook Downloads</button>
+            </div>
+            <a href="#"><img src="./img/roll15-copy.png" alt="Roll 15 dice" class="dice" /></a>
+            <div class="socials">
+                <a href="https://twitter.com/antonysoehner" target="_blank" rel="noopener noreferrer"
+                    class="social-btn">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
+                        class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://facebook.com/antonysoehner" target="_blank" rel="noopener noreferrer"
+                    class="social-btn">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook"
+                        class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/antonysoehner/" target="_blank" rel="noopener noreferrer"
+                    class="social-btn">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram"
+                        class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path fill="currentColor"
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                    </svg></a>
+                <a href="mailto:authorantonysoehner@gmail.com" target="_blank" rel="noopener noreferrer"
+                    class="social-btn">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope"
+                        class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                        </path>
+                    </svg></a>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="./plugins/ScrollMagic.min.js"></script>
+    <script src="./plugins/debug.addIndicators.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

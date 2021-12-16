@@ -713,6 +713,8 @@ footer .social-btn:hover {
     }
 }
 
+/* =============== ADVENTURES PAGE ===============*/
+
 #adventures {
     width: 100%;
 }
@@ -725,8 +727,13 @@ footer .social-btn:hover {
     background-size: cover;
 }
 
+#adventures .adventures-land p {
+    color: var(--text-secondary);
+    text-align: center;
+}
+
 #adventures h1 {
-    padding: 200px 0;
+    padding-top: 200px;
     font-size: 7rem;
     text-shadow: 3px 3px 2px black;
 }
@@ -821,4 +828,246 @@ footer .social-btn:hover {
     color: var(--text-primary);
 }
 
+/* =============== BARD'S CORNER PAGE ===============*/
 
+#bards-corner {
+    width: 100%;
+}
+
+#bards-corner .bards-land {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./img/adventures.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#bards-corner h1 {
+    padding-top: 200px;
+    font-size: 7rem;
+    text-shadow: 3px 3px 2px black;
+}
+
+#bards-corner .bards-land p {
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+#bards-corner .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#bards-corner .series-container {
+    width: 100%;
+    text-align: center;
+}
+
+#bards-corner .series-container h2 {
+    color: var(--text-secondary);
+    padding-top: 100px;
+    font-size: 3rem;
+    text-shadow: 3px 3px 2px black;
+    text-decoration: underline;
+}
+
+#bards-corner .series-container p {
+    color: var(--text-primary);
+    padding: 20px 0;
+}
+
+#bards-corner .series-container:nth-child(odd) {
+    background-color: var(--bg-tertiary);
+}
+
+#bards-corner .series-container:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+#bards-corner .book-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+#bards-corner .book-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+#bards-corner .book-container img {
+    width: 400px;
+}
+
+#bards-corner .textbox {
+    width: 350px;
+    color: var(--text-secondary);
+    text-align: inherit;
+    letter-spacing: 0.1rem;
+}
+
+#bards-corner .textbox h3 {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 25px 0;
+}
+
+#bards-corner .textbox h6 {
+    font-size: 1rem;
+    padding: 20px;
+}
+
+#bards-corner .textbox p {
+    color: var(--text-primary);
+}
+
+#bards-corner .audio-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bards-corner button {
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+    margin-top: 20px;
+}
+
+#bards-corner button:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+/* =============== PORTALS PAGE ===============*/
+
+#portals {
+    width: 100%;
+}
+
+#portals .portals-land {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./img/portals-background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#portals h1 {
+    padding-top: 200px;
+    font-size: 7rem;
+    text-shadow: 3px 3px 2px black;
+}
+
+#portals .portals-land p {
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+#portals .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#portals .series-container {
+    width: 100%;
+    text-align: center;
+}
+
+#portals .series-container h2 {
+    color: var(--text-secondary);
+    padding-top: 100px;
+    font-size: 3rem;
+    text-shadow: 3px 3px 2px black;
+    text-decoration: underline;
+}
+
+#portals .series-container p {
+    color: var(--text-primary);
+    padding: 20px 0;
+}
+
+#portals .series-container:nth-child(odd) {
+    background-color: var(--bg-tertiary);
+}
+
+#portals .series-container:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+#portals .book-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+#portals .book-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+#portals .book-container img {
+    width: 400px;
+}
+
+#portals .textbox {
+    width: 350px;
+    
+    color: var(--text-secondary);
+    text-align: inherit;
+    letter-spacing: 0.1rem;
+}
+
+#portals .textbox h3 {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 25px 0;
+}
+
+#portals .textbox h6 {
+    font-size: 1rem;
+    padding: 20px;
+}
+
+#portals .textbox p {
+    color: var(--text-primary);
+}
+
+#portals button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+    margin-top: 20px;
+}
+
+#portals button:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+#portals .btn-container {
+    margin: 100px 0;
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
