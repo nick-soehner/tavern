@@ -6,5 +6,7 @@ tavern
         - change all img to videos on bards corner in css as well
         - go through nav links on all pages
         - fix titles
-        - can simplify the css but will wait until commits
+    
+    12/17
+        - could redo the front page but will wait prob
     

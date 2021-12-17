@@ -172,7 +172,7 @@ h1 {
 #landing {
     height: 100vh;
     width: 100%;
-    background-image: url(./img/bakground.jpg);
+    background-image: url(./img/background.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -203,6 +203,13 @@ h1 {
 
 /* =============== COMING SOON ===============*/
 
+#coming-soon h1,
+#about-me h1,
+#photo-gallery h1,
+#cast-message h1 {
+    padding-top: 50px;
+}
+
 #coming-soon {
     height: 100vh;
     width: 100%;
@@ -210,7 +217,7 @@ h1 {
     position: relative;
 }
 
-#coming-soon .flex {
+#coming-soon .flexbox {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -262,7 +269,7 @@ h1 {
     background-color: var(--bg-secondary);
 }
 
-#about-me .flex {
+#about-me .flexbox {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -610,7 +617,7 @@ footer .social-btn:hover {
         margin: 0;
     }
 
-    .flex {
+    .flexbox {
         flex-direction: column;
     }
 
@@ -623,7 +630,7 @@ footer .social-btn:hover {
         transform: translateX(4rem);
     }
 
-    main #coming-soon .flex {
+    main #coming-soon .flexbox {
         align-items: center;
     }
 
@@ -631,12 +638,17 @@ footer .social-btn:hover {
         text-align: center;
     }
 
-    main #about-me .flex img {
+    main #about-me .btn-container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main #about-me .flexbox img {
         transform: translateX(2rem);
         width: 200px;
     }
 
-    main #about-me .flex {
+    main #about-me .flexbox {
         align-items: center;
     }
 
@@ -648,16 +660,23 @@ footer .social-btn:hover {
         width: 300px;
     }
 
+    main #photo-gallery img {
+        width: 400px;
+    }
+
+    main #photo-gallery figure {
+        width: 400px;
+    }
+    
     main #photo-gallery .gallery {
         display: grid;
-        grid-template-columns: repeat(1, 500px);
+        grid-template-columns: repeat(1, 400px);
         grid-auto-rows: 500px;
         grid-template-rows: repeat(6, 500px);
     }
 
     main #photo-gallery .photo.one {
         grid-column: 1;
-        
     }
 
     main #photo-gallery .photo.two {
@@ -686,7 +705,7 @@ footer .social-btn:hover {
     }
 
     main #cast-message {
-        height: 60vh;
+        height: 70vh;
     }
 
     main #cast-message h3 {
@@ -730,6 +749,15 @@ footer .social-btn:hover {
 
     main #portals h1 {
         padding-top: 50px;
+    }
+
+    main #meet-characters h1 {
+        padding-top: 50px;
+    }
+
+    main #meet-characters .flexbox {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -860,7 +888,7 @@ h1 {
 #bards-corner .bards-land {
     width: 100%;
     height: 50vh;
-    background-image: url(./img/adventures.jpg);
+    background-image: url(./img/bard-background.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -950,7 +978,7 @@ h1 {
 #free-adventures .free-adventures-land {
     width: 100%;
     height: 50vh;
-    background-image: url(./img/adventures.jpg);
+    background-image: url(./img/free-adventure-background.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -974,4 +1002,66 @@ h1 {
 #free-adventures button:hover {
     background-color: var(--bg-secondary);
     color: var(--text-secondary);
+}
+
+/* =============== MEET THE CHARACTERS ===============*/
+
+#meet-characters {
+    width: 100%;
+    background-color: var(--bg-secondary);
+}
+
+#meet-characters .meet-characters-land {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./img/meet-characters.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#meet-characters .meet-characters-land p {
+    color: var(--text-secondary);
+    text-align: center;
+    font-size: .7rem;
+    text-shadow: 1px 1px 2px black;
+}
+
+#meet-characters .meet-characters-land h6 {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+#meet-characters h2 {
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 50px 0;
+}
+
+#meet-characters .flex-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#meet-characters .flexbox {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#meet-characters .column {
+    display: flex;
+    flex-direction: column;
+}
+
+#meet-characters .book-cover {
+    transform: translateX(2.5rem);
+}
+
+#meet-characters img {
+    width: 300px;
+    height: 300px;
+    margin: 20px 5px;
 }
