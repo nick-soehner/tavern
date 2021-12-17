@@ -711,6 +711,26 @@ footer .social-btn:hover {
     main footer button {
         margin-top: 10px;
     }
+
+    main .book-container img {
+        transform: translateX(4rem);
+    }
+
+    main .book-container {
+        flex-direction: column;
+    }
+
+    main .btn-container {
+        flex-direction: column;
+    }
+
+    main #bards-corner h1 {
+        padding-top: 50px;
+    }
+
+    main #portals h1 {
+        padding-top: 50px;
+    }
 }
 
 /* =============== ADVENTURES PAGE ===============*/
@@ -732,9 +752,9 @@ footer .social-btn:hover {
     text-align: center;
 }
 
-#adventures h1 {
+/*#adventures h1 {
     padding-top: 200px;
-    font-size: 7rem;
+    font-size: 5rem;
     text-shadow: 3px 3px 2px black;
 }
 
@@ -771,19 +791,20 @@ footer .social-btn:hover {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-}
+} */
 
 #adventures .btn-container {
     margin: 100px 0;
     width: 70%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;
 }
 
 #adventures .btn-container button {
     width: 250px;
     height: 50px;
+    margin-top: 20px;
     cursor: pointer;
     font-size: 1.1rem;
     color: var(--bg-secondary);
@@ -796,7 +817,7 @@ footer .social-btn:hover {
     color: var(--text-secondary);
 }
 
-#adventures .book-container {
+/* #adventures .book-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -826,7 +847,7 @@ footer .social-btn:hover {
 
 #adventures .textbox p {
     color: var(--text-primary);
-}
+} */
 
 /* =============== BARD'S CORNER PAGE ===============*/
 
@@ -844,7 +865,7 @@ footer .social-btn:hover {
 
 #bards-corner h1 {
     padding-top: 200px;
-    font-size: 7rem;
+    font-size: 5rem;
     text-shadow: 3px 3px 2px black;
 }
 
@@ -1027,7 +1048,7 @@ footer .social-btn:hover {
 
 #portals .textbox {
     width: 350px;
-    
+    min-width: 300px;
     color: var(--text-secondary);
     text-align: inherit;
     letter-spacing: 0.1rem;
@@ -1068,6 +1089,114 @@ footer .social-btn:hover {
     margin: 100px 0;
     width: 60%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;
+}
+
+/* =============== FREE ADVENTURES PAGE ===============*/
+
+#free-adventures {
+    width: 100%;
+}
+
+.free-adventures-land {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./img/adventures.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.free-adventures-land p {
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+h1 {
+    padding-top: 200px;
+    font-size: 5rem;
+    text-shadow: 3px 3px 2px black;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.series-container {
+    width: 100%;
+    text-align: center;
+}
+
+.series-container h2 {
+    color: var(--text-secondary);
+    padding-top: 100px;
+    font-size: 3rem;
+    text-shadow: 3px 3px 2px black;
+    text-decoration: underline;
+}
+
+.series-container:nth-child(odd) {
+    background-color: var(--bg-tertiary);
+}
+
+.series-container:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+.book-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-container img {
+    width: 400px;
+}
+
+.textbox {
+    width: 350px;
+    color: var(--text-secondary);
+    text-align: inherit;
+    letter-spacing: 0.1rem;
+}
+
+.textbox h3 {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 25px 0;
+}
+
+.textbox h6 {
+    font-size: 1rem;
+    padding: 20px;
+}
+
+.textbox p {
+    color: var(--text-primary);
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
 }
