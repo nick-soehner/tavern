@@ -118,6 +118,7 @@ h1 {
     text-decoration: none;
     /* filter: grayscale(100%) opacity(0.7); */
     transition: var(--transition-speed);
+    width: 20px;
 }
 
 .nav-link:hover {
@@ -609,9 +610,9 @@ footer .social-btn:hover {
         flex-direction: row;
     }
 
-    .nav-link {
+    /* .nav-link {
         justify-content: center;
-    }
+    } */
 
     main {
         margin: 0;
