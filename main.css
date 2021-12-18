@@ -118,7 +118,7 @@ h1 {
     text-decoration: none;
     /* filter: grayscale(100%) opacity(0.7); */
     transition: var(--transition-speed);
-    width: 20px;
+    /* width: 20px; */
 }
 
 .nav-link:hover {
@@ -384,7 +384,6 @@ h1 {
     column-gap: 50px;
 }
 
-
 #photo-gallery .photo {
     width: 500px;
     height: 400px;
@@ -600,6 +599,7 @@ footer .social-btn:hover {
         bottom: 0;
         width: 100vw;
         height: 5rem;
+        overflow-x: scroll;
     }
 
     .logo {
@@ -610,12 +610,14 @@ footer .social-btn:hover {
         flex-direction: row;
     }
 
-    /* .nav-link {
+    .nav-link {
         justify-content: center;
-    } */
+        align-items: center;
+    }
 
     main {
         margin: 0;
+        width: 100vw;
     }
 
     .flexbox {
@@ -637,6 +639,7 @@ footer .social-btn:hover {
 
     main #about-me .textbox {
         text-align: center;
+        width: 95%;
     }
 
     main #about-me .btn-container {
@@ -657,21 +660,34 @@ footer .social-btn:hover {
         width: 110px;
     }
 
+    main #about-me .btnboxtext {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main #about-me .btnbox {
+        flex-wrap: wrap;
+    }
+
+    main #about-me .white {
+        margin-top: 50px;
+    }
+
     main #photo-gallery h3 {
         width: 300px;
     }
 
     main #photo-gallery img {
-        width: 400px;
+        width: 350px;
     }
 
     main #photo-gallery figure {
-        width: 400px;
+        width: 300px;
     }
     
     main #photo-gallery .gallery {
         display: grid;
-        grid-template-columns: repeat(1, 400px);
+        grid-template-columns: repeat(1, 350px);
         grid-auto-rows: 500px;
         grid-template-rows: repeat(6, 500px);
     }
@@ -760,6 +776,8 @@ footer .social-btn:hover {
         flex-direction: column;
         align-items: center;
     }
+
+    
 }
 
 /* =============== FLEX SETUPS ===============*/
