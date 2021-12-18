@@ -600,10 +600,11 @@ footer .social-btn:hover {
         width: 100vw;
         height: 5rem;
         overflow-x: scroll;
+        overflow-y: hidden;
     }
 
     .logo {
-        display: none;
+        margin-bottom: 0;
     }
 
     .navbar-nav {
