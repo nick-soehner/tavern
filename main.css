@@ -619,6 +619,7 @@ footer .social-btn:hover {
     main {
         margin: 0;
         width: 100vw;
+        overflow-x: hidden;
     }
 
     .flexbox {
