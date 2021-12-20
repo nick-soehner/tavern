@@ -9,6 +9,8 @@ tavern
     
     12/17
         - could redo the front page but will wait prob
-        - menu messed up on mobile
         - adventures also messed up on mobile
+
+    12/19
+        - link forms
     

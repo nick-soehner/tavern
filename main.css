@@ -49,6 +49,11 @@ h1 {
     text-align: center;
 }
 
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}
 /* =============== LOADER ===============*/
 
 .loader-wrapper {
@@ -71,13 +76,13 @@ h1 {
     color: var(--color-red);
     animation: loader 1.5s infinite ease;
 }
-  
+
 @keyframes loader {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -138,7 +143,6 @@ h1 {
     min-width: 2rem;
     margin: 0 1.5rem;
 }
-
 
 .logo {
     font-weight: bold;
@@ -399,8 +403,7 @@ h1 {
 }
 
 #photo-gallery .photo.show {
-    animation: 
-        fadeInSide 1s ease forwards;
+    animation: fadeInSide 1s ease forwards;
 }
 
 #photo-gallery img {
@@ -626,6 +629,10 @@ footer .social-btn:hover {
         flex-direction: column;
     }
 
+    main .textbox {
+        width: 350px;
+    }
+
     main #coming-soon {
         height: inherit;
         text-align: center;
@@ -686,7 +693,7 @@ footer .social-btn:hover {
     main #photo-gallery figure {
         width: 300px;
     }
-    
+
     main #photo-gallery .gallery {
         display: grid;
         grid-template-columns: repeat(1, 350px);
@@ -705,7 +712,7 @@ footer .social-btn:hover {
 
     main #photo-gallery .photo.three {
         grid-column: 1;
-       grid-row: 3;
+        grid-row: 3;
     }
 
     main #photo-gallery .photo.four {
@@ -720,7 +727,7 @@ footer .social-btn:hover {
 
     main #photo-gallery .photo.six {
         grid-column: 1;
-       grid-row: 6;
+        grid-row: 6;
     }
 
     main #cast-message {
@@ -762,15 +769,29 @@ footer .social-btn:hover {
         flex-direction: column;
     }
 
-    main #bards-corner h1 {
-        padding-top: 50px;
+    main .form-box {
+        width: 300px;
     }
 
-    main #portals h1 {
-        padding-top: 50px;
+    main .comment,
+    main .email {
+        width: 275px;
     }
 
-    main #meet-characters h1 {
+    main .form-line {
+        width: 300px;
+    }
+
+    main input {
+        width: 100px;
+    }
+
+    main #bards-corner h1,
+    main #meet-characters h1,
+    main #free-adventures h1,
+    main #portals h1,
+    main #the-prince h1,
+    main #cast-message-page h1 {
         padding-top: 50px;
     }
 
@@ -779,7 +800,13 @@ footer .social-btn:hover {
         align-items: center;
     }
 
-    
+    main #the-prince .book-container {
+        align-items: center;
+    }
+
+    main #cast-message-page .textbox {
+        width: 300px;
+    }
 }
 
 /* =============== FLEX SETUPS ===============*/
@@ -788,6 +815,13 @@ h1 {
     padding-top: 200px;
     font-size: 5rem;
     text-shadow: 3px 3px 2px black;
+}
+
+h3 {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 25px 0;
+    color: var(--text-secondary);
 }
 
 .flex {
@@ -828,7 +862,7 @@ h1 {
 .book-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .book-container img {
@@ -836,7 +870,7 @@ h1 {
 }
 
 .textbox {
-    width: 350px;
+    width: 400px;
     color: var(--text-secondary);
     text-align: inherit;
     letter-spacing: 0.1rem;
@@ -850,7 +884,7 @@ h1 {
 
 .textbox h6 {
     font-size: 1rem;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .textbox p {
@@ -1043,7 +1077,7 @@ h1 {
 #meet-characters .meet-characters-land p {
     color: var(--text-secondary);
     text-align: center;
-    font-size: .7rem;
+    font-size: 0.7rem;
     text-shadow: 1px 1px 2px black;
 }
 
@@ -1086,3 +1120,182 @@ h1 {
     height: 300px;
     margin: 20px 5px;
 }
+
+/* =============== THE PRINCE ===============*/
+
+#the-prince {
+    width: 100%;
+}
+
+#the-prince .the-prince-land {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./img/the-prince-background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#the-prince .the-prince-land p {
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+#the-prince .cover {
+    width: 60%;
+}
+
+#the-prince button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+    margin-top: 50px;
+}
+
+#the-prince button:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+#the-prince .book-container {
+    align-items: center;
+}
+
+#the-prince h3 {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 25px 0;
+    color: var(--text-secondary);
+}
+
+#the-prince .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border-radius: 20px;
+}
+
+#form {
+    padding: 50px 50px 25px 50px;
+}
+
+.form-line {
+    display: flex;
+    width: 500px;
+    margin: 20px 0;
+}
+
+label {
+    color: white;
+    font-size: 1.15rem;
+}
+
+input {
+    height: 30px;
+    width: 500px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.comment {
+    margin: 0px 30px 0px 30px;
+    height: 200px;
+    width: 475px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.submit {
+    margin-bottom: 30px;
+}
+
+.story-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.story-map-img {
+    background-image: url(./img/story-map.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70%;
+    height: 700px;
+    margin: 40px 0;
+}
+
+/* =============== CAST MESSAGE ===============*/
+
+#cast-message-page {
+    width: 100%;
+}
+
+#cast-message-page .cast-message-page-land {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./img/cast-message-background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#cast-message-page .cast-message-page-land p {
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+#cast-message-page .book-container {
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+#cast-message-page .textbox {
+    width: 550px;
+}
+
+#cast-message-page button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
+    border: 2px solid var(--text-secondary);
+    margin-top: 50px;
+}
+
+#cast-message-page button:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+#cast-message-page ul {
+    margin: 30px;
+    line-height: 2rem;
+    text-align: left;
+}
+
+#cast-message-page .radio {
+    text-align: center;
+}
+
